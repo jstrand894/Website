@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Jackson Strand" />
+
+<meta name="date" content="2024-02-28" />
+
+<title>MT Field Site Analysis Repot</title>
+
+<script src="PF-MT-Report_files/header-attrs-2.25/header-attrs.js"></script>
+<script src="PF-MT-Report_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="PF-MT-Report_files/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="PF-MT-Report_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="PF-MT-Report_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="PF-MT-Report_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="PF-MT-Report_files/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="PF-MT-Report_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="PF-MT-Report_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="PF-MT-Report_files/navigation-1.1/tabsets.js"></script>
+<link href="PF-MT-Report_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="PF-MT-Report_files/highlightjs-9.12.0/highlight.js"></script>
+<script src="PF-MT-Report_files/kePrint-0.0.1/kePrint.js"></script>
+<link href="PF-MT-Report_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">MT Field Site Analysis Repot</h1>
+<h4 class="author">Jackson Strand</h4>
+<h4 class="date">2024-02-28</h4>
+
+</div>
+
+
+<div id="post-farm" class="section level1">
+<h1>POST FARM</h1>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<div id="plant-selection-and-cages" class="section level3">
+<h3>Plant Selection and Cages</h3>
+<p>Assessment of C. cinctus infestation and mortality within B. inermis
+were assessed using a 34 x 60 ft plot at the Arthur H. Post Agronomy
+Farm (43°38’19.39”N, 116°14’28.86”W), an extension research station of
+Montana State University in Bozeman, MT. The cage structure was built
+using 1-inch PVC piping with the netting made using 530<span
+class="math inline">\(\mu\)</span> Amber Lumite Screen (BioQuip®
+Products, LLC). Twelve cages were built to dimensions of 6ft x 3ft x 3ft
+(L x W x H) with cage locations selected randomly based on the space
+available within the plot and arranged in sets of three. The cages were
+removed from the plot after 3 weeks of sawfly release.</p>
+</div>
+<div id="insects" class="section level3">
+<h3>Insects</h3>
+<p>Wheat stem stubble was collected in Three Forks, MT, USA
+(43°38’19.39”N, 116°14’28.86”W) from fields that experienced high levels
+of C. cinctus infestation and cutting in the prior year. Cut stubble,
+which contained C. cinctus larvae in diapause, were kept refrigerated
+between -2°C and 3°C for &gt;100 days as required to complete obligatory
+larval diapause. As needed, stubs were removed from refrigeration and
+kept at 22-27°C for 4-5 weeks inside of 100 oz GladWare® storage
+containers (Glad®, Oakland, California USA). Stubs were added to cages
+once B. inermis stems reached six inches tall, with sawfly quantity
+treatments as follows: high (600 stubs), low (200 stubs), and control (0
+stubs).</p>
+<div id="data-collection" class="section level4">
+<h4>Data Collection</h4>
+<p>Stems were collected from each cage site in late August. All stems
+from each 6 x 3 ft cage section were collected. Each stem was sliced
+open using X-Acto® knives to collect data on infestation, dead larvae,
+live larvae, and parasitism at each internode.</p>
+</div>
+</div>
+</div>
+<div id="analysis" class="section level2">
+<h2>Analysis</h2>
+<div id="overall-wss-infestation-and-cutting" class="section level3">
+<h3>Overall WSS Infestation and Cutting</h3>
+<div id="basic-table-and-plot-of-infestation" class="section level4">
+<h4>Basic Table and Plot of Infestation</h4>
+<div style="display: flex;">
+<div style="flex: 1;">
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+2023 Post Farm Infestation
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Treatment
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Total Stems
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+% Inf
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+% Cut
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+control
+</td>
+<td style="text-align:center;">
+337
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+high
+</td>
+<td style="text-align:center;">
+421
+</td>
+<td style="text-align:center;">
+0.71
+</td>
+<td style="text-align:center;">
+0.13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+low
+</td>
+<td style="text-align:center;">
+415
+</td>
+<td style="text-align:center;">
+0.51
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="flex: 1;">
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+2022 Post Farm Infestation
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Treatment
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Total Stems
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+% Inf
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+% Cut
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+control
+</td>
+<td style="text-align:center;">
+444
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:left;">
+0.00
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+high
+</td>
+<td style="text-align:center;">
+418
+</td>
+<td style="text-align:center;">
+0.65
+</td>
+<td style="text-align:left;">
+0.03
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+low
+</td>
+<td style="text-align:center;">
+387
+</td>
+<td style="text-align:center;">
+0.45
+</td>
+<td style="text-align:left;">
+0.02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="PF-MT-Report_files/figure-html/post%20farm%20plot-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Let’s take a closer look at the number of nodes borrowed through by
+the larvae. Using this information we can make an arguement about the
+size and length of time each larvae was alive prior to dying. This can
+be informative in understanding how many larvae would have been left
+later in the season for potential parasitism.</p>
+</div>
+<div id="infestation-percentagenode" class="section level4">
+<h4>Infestation Percentage/Node</h4>
+<img src="PF-MT-Report_files/figure-html/v.r%20infestation%20node-1.png" width="672" style="display: block; margin: auto;" />
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+ANOVA Table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Df
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Sum Sq
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Mean Sq
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+F-Value
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Pr(&gt;F)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+treatment
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+0.044
+</td>
+<td style="text-align:center;">
+0.044
+</td>
+<td style="text-align:center;">
+6.692
+</td>
+<td style="text-align:center;">
+0.0144
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+nodes.inf
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+0.286
+</td>
+<td style="text-align:center;">
+0.057
+</td>
+<td style="text-align:center;">
+8.612
+</td>
+<td style="text-align:center;">
+0.0000
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+v.r
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+0.057
+</td>
+<td style="text-align:center;">
+0.029
+</td>
+<td style="text-align:center;">
+4.303
+</td>
+<td style="text-align:center;">
+0.0221
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Residuals
+</td>
+<td style="text-align:center;">
+32
+</td>
+<td style="text-align:center;">
+0.213
+</td>
+<td style="text-align:center;">
+0.007
+</td>
+<td style="text-align:center;">
+NA
+</td>
+<td style="text-align:center;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+<p>Based on the results of our ANOVA, we have weak evidence (Pval =
+0.0221) to suggest there is a difference in the number of nodes infested
+when considering treatment group and vegetative and reproductive
+stems.</p>
+<table class="table table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Cumulative sum of nodes infested
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="6">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+# of Nodes Infested
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Treatment
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+6
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+5
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+4
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+3
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+2
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+1
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+high
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.13
+</td>
+<td style="text-align:center;">
+0.36
+</td>
+<td style="text-align:center;">
+0.69
+</td>
+<td style="text-align:center;">
+0.89
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+low
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.13
+</td>
+<td style="text-align:center;">
+0.47
+</td>
+<td style="text-align:center;">
+0.76
+</td>
+<td style="text-align:center;">
+0.94
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="PF-MT-Report_files/figure-html/cumsum%20of%20infestation%20per%20node-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>I like this plot because it shows the cumulative percentage sum of
+nodes infested at each node. For example, at the 3rd node in 2023, we
+see that close to 70% of the stems in the ‘high’ treatment group
+exhibited between 3 and 6 nodes infested. As a general thought exercise,
+the more nodes a larvae burrowed through, the larger the larvae. This
+means that if we classify a “large” larvae as one who burrowed through
+at least 4 nodes, our infestation data shows that 36% of the larvae in
+the ‘high’ treatment groups died as “large” larvae.</p>
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Stems with Living Larvae (2023)
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Treatment
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Count
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Total Stems
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+%
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+high
+</td>
+<td style="text-align:center;">
+26
+</td>
+<td style="text-align:center;">
+421
+</td>
+<td style="text-align:center;">
+0.062
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+low
+</td>
+<td style="text-align:center;">
+35
+</td>
+<td style="text-align:center;">
+415
+</td>
+<td style="text-align:center;">
+0.084
+</td>
+</tr>
+</tbody>
+</table>
+<p>Interesting to see that 6.2% of stems in the ‘high’ treatment groups
+and 8.4% of stems in the ‘low’ treatment group had living WSS larvae.
+The stems for this experiement were harvested in late October, much
+later in the season when we would expect the second generation
+parasitoids to be searching for a host.</p>
+<hr>
+</div>
+</div>
+</div>
+</div>
+<div id="montana-field-sites" class="section level1">
+<h1>MONTANA FIELD SITES</h1>
+<div id="methods-1" class="section level2">
+<h2>Methods</h2>
+<p>To assess C cinctus infestation, larval mortality, and parasitoid
+prevalence within B. inermis and adjacent wheat fields, sites were
+chosen that had the best chance of accurately representing conditions
+throughout the Golden Triangle, a region of north-central Montana known
+for its dryland grain production. Samples were collected in both early
+July and late August in 2021, 2022, and 2023 from sites in Big Sandy,
+Moccasin, and Amsterdam, MT, USA. Sample locations were chosen by
+identifying fields with consistent wheat production that were adjacent
+to healthy B. inermis stands, either situated between fields or between
+fields and roadways. Polygons containing B. inermis were set up along
+the periphery of adjacent wheat fields, each covering an area of
+approximately 100 meters. Four collection squares of 1ft x 1ft were
+randomly selected within each polygon during both collection events each
+year. All stems within each 1 x 1 ft square were collected. The stems
+were then processed and split in the laboratory to assess infestation,
+live eggs, dead eggs, dead larvae, live larvae, parasitism, and
+cutting.</p>
+</div>
+<div id="analysis-1" class="section level2">
+<h2>Analysis</h2>
+<div id="big-sandy-mt-2023" class="section level3">
+<h3>Big Sandy, MT 2023</h3>
+<div id="lochy-property---north-road" class="section level4">
+<h4>Lochy Property - North Road</h4>
+<div class="float">
+<img
+src="https://github.com/jstrand894/Website/blob/main/nnns-min.png?raw=true"
+alt="North Road, Big Sandy, MT (2023)" />
+<div class="figcaption">North Road, Big Sandy, MT (2023)</div>
+</div>
+<p><strong>Note:</strong><br />
+- In 2023, the field south of North Road was fallow, so no stubble
+infestation data was collected from the field south of North Road.</p>
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+North Road (site nn) Infestation Table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Location
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Distance
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Collection
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+% Inf
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Cut
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Parasitized
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Potential Cut
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+nn
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.09
+</td>
+<td style="text-align:center;">
+0.62
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+0.77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+nn
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+0.53
+</td>
+<td style="text-align:center;">
+0.36
+</td>
+<td style="text-align:center;">
+0.89
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+nn
+</td>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.69
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.05
+</td>
+<td style="text-align:center;">
+0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+nn
+</td>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+summer
+</td>
+<td style="text-align:center;">
+0.35
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+North Road (site ns) Infestation Table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Location
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Distance
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Collection
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+% Inf
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Cut
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Parasitized
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Potential Cut
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+ns
+</td>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.70
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.10
+</td>
+<td style="text-align:center;">
+0.13
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ns
+</td>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+summer
+</td>
+<td style="text-align:center;">
+0.44
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="PF-MT-Report_files/figure-html/NN%20and%20NS%20plot-1.png" width="960" /></p>
+<p>We saw very low levels of infestation in 2023 within the wheat. This
+was likely due a cold, mild spring that led to late stem development.
+Because the wheat was not well developed, the sawflies did not infest.
+This appears to have led to high infestation within the smooth brome.
+Will be interesting to compare to 2022 when stem elongation followed
+normal expected timelines.</p>
+</div>
+<div id="lochy-property---gardiner-road" class="section level4">
+<h4>Lochy Property - Gardiner Road</h4>
+<div class="float">
+<img
+src="https://github.com/jstrand894/Website/blob/main/gardiner%20road-min.png?raw=true"
+alt="Gardiner Road, Big Sandy, MT (2023)" />
+<div class="figcaption">Gardiner Road, Big Sandy, MT (2023)</div>
+</div>
+<p>In 2022, Gardiner road underwent a major reconstruction with both
+ditches being regraded. This severely diminished the amount smooth brome
+found along the edge of the roadway.</p>
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Gardiner Road Infestation Table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Distance
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Collection
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+% Inf
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Cut
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Parasitized
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Potential Cut
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:left;">
+0.11
+</td>
+<td style="text-align:center;">
+0.25
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.42
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:left;">
+0.17
+</td>
+<td style="text-align:center;">
+0.25
+</td>
+<td style="text-align:center;">
+0.20
+</td>
+<td style="text-align:center;">
+0.44
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:left;">
+0.64
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+0.10
+</td>
+<td style="text-align:center;">
+0.14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+summer
+</td>
+<td style="text-align:left;">
+0.51
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="PF-MT-Report_files/figure-html/G%20plot-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Similar results to North Road seen here. Low infestation in the
+adjacent wheat field was due to the cool spring and lack of infestable
+stems during the sawfly flight. This shows that even in odd years like
+2023, sawflies are still present in the smooth brome, meaning
+parasitoids will still have larval hosts.</p>
+</div>
+</div>
+<div id="moccasin-mt-2023" class="section level3">
+<h3>Moccasin, MT 2023</h3>
+<div id="sunset-harvest-road-intersection" class="section level4">
+<h4>Sunset &amp; Harvest Road Intersection</h4>
+<div class="float">
+<img
+src="https://github.com/jstrand894/Website/blob/main/harvest%20road-min.png?raw=true"
+alt="Harvest &amp; Sunset Road Instersection, Big Sandy, MT (2023)" />
+<div class="figcaption">Harvest &amp; Sunset Road Instersection, Big
+Sandy, MT (2023)</div>
+</div>
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Sunset Road Infestation Table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Location
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Distance
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Collection
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+% Inf
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Cut
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Parasitized
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Potential Cut
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+sun
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.67
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sun
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.25
+</td>
+<td style="text-align:center;">
+0.71
+</td>
+<td style="text-align:center;">
+0.10
+</td>
+<td style="text-align:center;">
+0.81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sun
+</td>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.45
+</td>
+<td style="text-align:center;">
+0.15
+</td>
+<td style="text-align:center;">
+0.16
+</td>
+<td style="text-align:center;">
+0.31
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+sun
+</td>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+summer
+</td>
+<td style="text-align:center;">
+0.20
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Harvest Road Infestation Table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Location
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Distance
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Collection
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+% Inf
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Cut
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Parasitized
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Potential Cut
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+har
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.67
+</td>
+<td style="text-align:center;">
+0.17
+</td>
+<td style="text-align:center;">
+0.85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+har
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.25
+</td>
+<td style="text-align:center;">
+0.71
+</td>
+<td style="text-align:center;">
+0.10
+</td>
+<td style="text-align:center;">
+0.81
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+har
+</td>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:center;">
+0.39
+</td>
+<td style="text-align:center;">
+0.07
+</td>
+<td style="text-align:center;">
+0.13
+</td>
+<td style="text-align:center;">
+0.21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+har
+</td>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+summer
+</td>
+<td style="text-align:center;">
+0.22
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="PF-MT-Report_files/figure-html/SUN/HAR%20plot-1.png" width="960" style="display: block; margin: auto;" /></p>
+</div>
+<div id="kolin-road" class="section level4">
+<h4>Kolin Road</h4>
+<div class="float">
+<img
+src="https://github.com/jstrand894/Website/blob/main/kolin%20road-min.png?raw=true"
+alt="Kolin Road, Moccasin, MT (2023)" />
+<div class="figcaption">Kolin Road, Moccasin, MT (2023)</div>
+</div>
+<table class="table table-striped table-bordered table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+Kolin Road Infestation Table
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Distance
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+Collection
+</th>
+<th style="text-align:left;background-color: #f2f2f2 !important;">
+% Inf
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Cut
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Parasitized
+</th>
+<th style="text-align:center;background-color: #f2f2f2 !important;">
+Potential Cut
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:left;">
+0.48
+</td>
+<td style="text-align:center;">
+0.330
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+0.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:left;">
+0.54
+</td>
+<td style="text-align:center;">
+0.350
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+fall
+</td>
+<td style="text-align:left;">
+0.60
+</td>
+<td style="text-align:center;">
+0.005
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+brome
+</td>
+<td style="text-align:left;">
+summer
+</td>
+<td style="text-align:left;">
+0.34
+</td>
+<td style="text-align:center;">
+0.000
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+<td style="text-align:center;">
+0.00
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="PF-MT-Report_files/figure-html/K%20plot-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
